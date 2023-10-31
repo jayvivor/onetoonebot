@@ -1,5 +1,6 @@
 import discord
 import itertools as it
+import os
 from discord.ext import commands
 
 intents = discord.Intents.default()  # Allow the use of custom intents
@@ -64,4 +65,4 @@ async def clear(ctx, category_name):
         await c.delete()
     await target.delete()
 
-client.run('OTQxMDE0Njc5MTEzODUwODkw.YgPyNg.Xf2_fajDNpGh27adrk_3lkaaFeE')
+client.run(os.environ.get("DISCORD_API_KEY"))
